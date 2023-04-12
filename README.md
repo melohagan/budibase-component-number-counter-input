@@ -1,21 +1,11 @@
 # Budibase Number Counter Input 
 
-
-## Description
 A number input with incremental steps, adapted from [svelteuidev](https://www.svelteui.org/core/number-input/)
 
+Set the default value, minimum, maximum, and the increment step. 
 
+![step](https://user-images.githubusercontent.com/101575380/231453113-0d45b1ce-760a-4ab7-a61b-a01cd9699085.gif)
 
-## Instructions
+----
 
-To build your new  plugin run the following in your Budibase CLI:
-```
-budi plugins --build
-```
-
-You can also re-build everytime you make a change to your plugin with the command:
-```
-budi plugins --watch
-```
-
-Find out more about [Budibase](https://github.com/Budibase/budibase).
+More on custom components: https://docs.budibase.com/docs/custom-plugin
