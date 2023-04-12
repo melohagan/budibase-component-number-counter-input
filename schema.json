@@ -57,11 +57,6 @@
         "label": "Disabled",
         "key": "disabled",
         "defaultValue": false
-      },
-      {
-        "type": "validation/number",
-        "label": "Validation",
-        "key": "validation"
       }
     ]
   }

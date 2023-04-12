@@ -6,7 +6,6 @@
   export let field
   export let label
   export let disabled = false
-  export let validation
   export let defaultValue = 0
   export let onChange
   export let min = 0
@@ -21,7 +20,7 @@
 
   const formApi = formContext?.formApi;
   $: formStep = formStepContext ? $formStepContext || 1 : 1;
-  $: formField = formApi?.registerField(field, "number", defaultValue, disabled, validation, formStep);
+  $: formField = formApi?.registerField(field, "number", defaultValue, disabled, null, formStep);
   
   let fieldState
   let fieldApi
