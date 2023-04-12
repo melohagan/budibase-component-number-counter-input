@@ -1,0 +1,68 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "budibase-number-counter",
+    "friendlyName": "budibase-number-counter",
+    "description": "A number input with incremental steps, adapted from svelteuidev",
+    "icon": "ChevronUpDown",
+    "settings": [
+      {
+        "type": "field/number",
+        "label": "Field",
+        "key": "field",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Label",
+        "key": "label"
+      },
+      {
+        "type": "number",
+        "label": "Default value",
+        "key": "defaultValue",
+        "defaultValue": 0
+      },
+      {
+        "type": "number",
+        "label": "Min",
+        "key": "min",
+        "defaultValue": 0
+      },
+      {
+        "type": "number",
+        "label": "Max",
+        "key": "max"
+      },
+      {
+        "type": "number",
+        "label": "Step",
+        "key": "step",
+        "defaultValue": 1
+      },
+      {
+        "type": "event",
+        "label": "On change",
+        "key": "onChange",
+        "context": [
+          {
+            "label": "Field Value",
+            "key": "value"
+          }
+        ]
+      },
+      {
+        "type": "boolean",
+        "label": "Disabled",
+        "key": "disabled",
+        "defaultValue": false
+      },
+      {
+        "type": "validation/number",
+        "label": "Validation",
+        "key": "validation"
+      }
+    ]
+  }
+}
