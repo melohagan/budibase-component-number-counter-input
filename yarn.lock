@@ -104,17 +104,24 @@
   resolved "https://registry.yarnpkg.com/@crownframework/svelte-error-boundary/-/svelte-error-boundary-1.0.3.tgz#f251254075bfe25cff0e8b40e9c81ddcd552f894"
   integrity sha512-ZtfYF9if48Ok8BTx/fn7bERJFKHKO6Ih5d/fkY6/pC3DQEnJq4vy6JOBFcisnpKYcZbjG5F/D4r06kqX7JKyqw==
 
-"@floating-ui/core@^0.7.2":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.3.tgz#d274116678ffae87f6b60e90f88cc4083eefab86"
-  integrity sha512-buc8BXHmG9l82+OQXOFU3Kr2XQx9ys01U/Q9HMIrZ300iLc8HLMgh7dcCqgYzAzf4BkoQvDcXf5Y+CuEZ5JBYg==
-
-"@floating-ui/dom@0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.5.2.tgz#908f3febbfc0d6696d70921616ec194fe07af183"
-  integrity sha512-z1DnEa7F3d8Fm/eXSbii8UEGpcjZGkQaYYUI0WpEVgD3vBfebDW8j/3ysusxonuMexoigA+A3b/fYH7sEqiwyg==
+"@floating-ui/core@^1.2.6":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.4.1.tgz#0d633f4b76052668afb932492ac452f7ebe97f17"
+  integrity sha512-jk3WqquEJRlcyu7997NtR5PibI+y5bi+LS3hPmguVClypenMsCY3CBa3LAQnozRCtCrYWSEtAdiskpamuJRFOQ==
   dependencies:
-    "@floating-ui/core" "^0.7.2"
+    "@floating-ui/utils" "^0.1.1"
+
+"@floating-ui/dom@1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.8.tgz#aee0f6ccc0787ab8fe741487a6e5e95b7b125375"
+  integrity sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==
+  dependencies:
+    "@floating-ui/core" "^1.2.6"
+
+"@floating-ui/utils@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
+  integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -304,12 +311,12 @@
   resolved "https://registry.yarnpkg.com/@stitches/core/-/core-1.2.8.tgz#dce3b8fdc764fbc6dbea30c83b73bfb52cf96173"
   integrity sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==
 
-"@svelteuidev/core@^0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@svelteuidev/core/-/core-0.11.1.tgz#0d60b6c285c315929a1b98fccff591e9d7c8045b"
-  integrity sha512-Dy16B6OaoSgMPyWL+WvrJwFB529N6Gmr4S4qdUWmE3LrJwhm9rNtwoEQn167dhOlmTQhfgJDot+DuIRRwtGXrw==
+"@svelteuidev/core@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@svelteuidev/core/-/core-0.14.0.tgz#03eceee09f79fe8afb3300133faf6502242b4c9a"
+  integrity sha512-gEo61WRZlPCEhGplwVe94CcV48euyF6y2u1xF0ngCj5A2WTZ6wYMWRkNVxSNP9HTv9+W+Uo5AuLt3D35S7HHmQ==
   dependencies:
-    "@floating-ui/dom" "0.5.2"
+    "@floating-ui/dom" "1.2.8"
     "@stitches/core" "1.2.8"
 
 "@techpass/passport-openidconnect@0.3.2":

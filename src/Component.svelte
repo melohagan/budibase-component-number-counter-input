@@ -1,6 +1,6 @@
 <script>
   import { getContext, onDestroy } from "svelte"
-  import { NumberInput } from '@svelteuidev/core';
+  import { NumberInput, SvelteUIProvider } from '@svelteuidev/core';
   import Label from "./Label.svelte";
 
   export let field
@@ -20,7 +20,7 @@
 
   const formApi = formContext?.formApi;
   $: formStep = formStepContext ? $formStepContext || 1 : 1;
-  $: formField = formApi?.registerField(field, "number", defaultValue, disabled, null, formStep);
+  $: formField = formApi?.registerField(field, "number", parse(defaultValue), disabled, null, formStep);
   
   let fieldState
   let fieldApi
@@ -51,17 +51,19 @@
 </script>
 
 <div class="spectrum-Form-item" use:styleable={$component.styles}>
-    <Label>{label}</Label>
-    <NumberInput
-        defaultValue={parse(defaultValue)}
-        {disabled}
-        min={parse(min)}
-        max={parse(max)}
-        precision={5}
-        step={parse(step)}
-        value={fieldState.value}
-        stepHoldDelay={250}
-        stepHoldInterval={50}
-        on:change={handleChange}
-      />
+  <SvelteUIProvider themeObserver={"light"}>
+      <Label>{label}</Label>
+      <NumberInput
+          defaultValue={parse(defaultValue)}
+          {disabled}
+          min={parse(min)}
+          max={parse(max)}
+          precision={5}
+          step={parse(step)}
+          value={fieldState.value}
+          stepHoldDelay={250}
+          stepHoldInterval={50}
+          on:change={handleChange}
+        />
+      </SvelteUIProvider>
 </div>
