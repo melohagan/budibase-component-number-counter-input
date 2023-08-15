@@ -41,10 +41,10 @@
       onChange({ value: e.detail })
     }
   }
-  const parseStep = () => {
-    let parsedStep = parseFloat(step)
-    if (parsedStep && !isNaN(parsedStep)) {
-      return parsedStep
+  const parse = (value) => {
+    let parsed = parseFloat(value)
+    if (parsed && !isNaN(parsed)) {
+      return parsed
     }
     return 1
   }
@@ -53,12 +53,12 @@
 <div class="spectrum-Form-item" use:styleable={$component.styles}>
     <Label>{label}</Label>
     <NumberInput
-        {defaultValue}
+        defaultValue={parse(defaultValue)}
         {disabled}
-        {min}
-        {max}
+        min={parse(min)}
+        max={parse(max)}
         precision={5}
-        step={parseStep()}
+        step={parse(step)}
         value={fieldState.value}
         stepHoldDelay={250}
         stepHoldInterval={50}

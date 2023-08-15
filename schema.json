@@ -19,19 +19,19 @@
         "key": "label"
       },
       {
-        "type": "number",
+        "type": "text",
         "label": "Default value",
         "key": "defaultValue",
         "defaultValue": 0
       },
       {
-        "type": "number",
+        "type": "text",
         "label": "Min",
         "key": "min",
         "defaultValue": 0
       },
       {
-        "type": "number",
+        "type": "text",
         "label": "Max",
         "key": "max"
       },
