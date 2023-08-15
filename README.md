@@ -1,6 +1,6 @@
 # Budibase Number Counter Input 
 
-A number input with incremental steps, adapted from [svelteuidev](https://www.svelteui.org/core/number-input/)
+A number input with incremental steps, adapted from [svelteuidev](https://www.svelteui.org/core/number-input)
 
 Set the default value, minimum, maximum, and the increment step. 
 

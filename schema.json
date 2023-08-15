@@ -36,7 +36,7 @@
         "key": "max"
       },
       {
-        "type": "number",
+        "type": "text",
         "label": "Step",
         "key": "step",
         "defaultValue": 1

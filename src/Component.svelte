@@ -41,21 +41,27 @@
       onChange({ value: e.detail })
     }
   }
+  const parseStep = () => {
+    let parsedStep = parseFloat(step)
+    if (parsedStep && !isNaN(parsedStep)) {
+      return parsedStep
+    }
+    return 1
+  }
 </script>
 
 <div class="spectrum-Form-item" use:styleable={$component.styles}>
     <Label>{label}</Label>
-    <div class="spectrum-Form-itemField">
     <NumberInput
         {defaultValue}
         {disabled}
         {min}
         {max}
-        {step}
+        precision={5}
+        step={parseStep()}
         value={fieldState.value}
         stepHoldDelay={250}
         stepHoldInterval={50}
         on:change={handleChange}
       />
-  </div>
 </div>
