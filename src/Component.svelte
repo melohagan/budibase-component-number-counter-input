@@ -1,6 +1,6 @@
 <script>
   import { getContext, onDestroy } from "svelte"
-  import { NumberInput, SvelteUIProvider } from '@svelteuidev/core';
+  import { NumberInput, css } from '@svelteuidev/core';
   import Label from "./Label.svelte";
 
   export let field
@@ -48,10 +48,25 @@
     }
     return 1
   }
+
+  const styles = css({
+      [`.svelteui-Input-input`]: {
+        backgroundColor: "var(--spectrum-textfield-m-background-color, var(--spectrum-global-color-gray-50))",
+        borderColor: "var(--spectrum-textfield-m-border-color, var(--spectrum-alias-border-color))",
+        color: "var(--spectrum-textfield-m-text-color, var(--spectrum-alias-text-color))"
+      },
+      [`.svelteui-NumberInput-control`]: {
+        borderColor: "var(--spectrum-textfield-m-border-color, var(--spectrum-alias-border-color))"
+      },
+      [`.svelteui-NumberInput-control:hover`]: {
+        backgroundColor: "var(--spectrum-button-primary-m-background-color-hover, var(--spectrum-global-color-gray-800)) !important",
+        borderColor: "var(--spectrum-button-primary-m-text-color-hover, var(--spectrum-global-color-gray-50)) !important"
+      }
+  })
 </script>
 
 <div class="spectrum-Form-item" use:styleable={$component.styles}>
-  <SvelteUIProvider themeObserver={"light"}>
+    <div class={styles()}>
       <Label>{label}</Label>
       <NumberInput
           defaultValue={parse(defaultValue)}
@@ -65,5 +80,5 @@
           stepHoldInterval={50}
           on:change={handleChange}
         />
-      </SvelteUIProvider>
+        </div>
 </div>
