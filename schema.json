@@ -33,7 +33,8 @@
       {
         "type": "text",
         "label": "Max",
-        "key": "max"
+        "key": "max",
+        "defaultValue": 100
       },
       {
         "type": "text",

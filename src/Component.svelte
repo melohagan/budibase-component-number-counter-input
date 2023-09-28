@@ -9,7 +9,7 @@
   export let defaultValue = 0
   export let onChange
   export let min = 0
-  export let max
+  export let max = 100
   export let step = 1
 
   const { styleable } = getContext("sdk")
@@ -43,7 +43,7 @@
   }
   const parse = (value) => {
     let parsed = parseFloat(value)
-    if (parsed && !isNaN(parsed)) {
+    if (parsed != null && !isNaN(parsed)) {
       return parsed
     }
     return 1
