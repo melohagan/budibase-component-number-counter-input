@@ -1,3 +1,9 @@
+# No longer compatible
+
+The get_current_component() internal API was removed in Svelte 5, and SvelteUI v0.14.0 still relies on it internally.
+
+Budibase has since moved to svelte5. Most plugins can be upgraded using `budi plugins --migrate-svelte5`.
+
 # Budibase Number Counter Input 
 
 A number input with incremental steps, adapted from [svelteuidev](https://www.svelteui.org/core/number-input)
